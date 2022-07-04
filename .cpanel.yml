@@ -1,14 +1,11 @@
 deployment:
   tasks:
     - export DEPLOYPATH=/home/alofougedusd/test.alofoug.edu.sd/
-    - composer install
-    # - export DEPLOYPATH=[path]
-    # - /usr/local/bin/composer install --optimize-autoloader --no-dev
-    # - /usr/local/bin/php artisan key:generate
-    # - /usr/local/bin/php artisan config:cache
-    # - /usr/local/bin/php artisan route:cache
-    # - /usr/local/bin/php artisan view:cache
-    # - /usr/local/bin/php artisan route:trans:cache
-    # - /usr/local/bin/php artisan storage:link
-    # - /usr/local/bin/php artisan migrate:fresh --seed
+      - /bin/php artisan key:generate
+      - /bin/php artisan config:cache
+      - /bin/php artisan route:cache
+      - /bin/php artisan view:cache
+      - /bin/php artisan route:trans:cache
+      - /bin/php artisan storage:link
+      - /bin/php artisan migrate:fresh --seed
 
