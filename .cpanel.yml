@@ -1,8 +1,7 @@
 deployment:
   tasks:
-  - export DEPLOYPATH=/home/alofougedusd/test.alofoug.edu.sd/
-  - /bin/cp -R ./ $DEPLOYPATH
-  - $DEPLOYPATH/composer install --optimize-autoloader --no-dev
+    - export DEPLOYPATH=/home/alofougedusd/test.alofoug.edu.sd/
+    - composer install
     # - export DEPLOYPATH=[path]
     # - /usr/local/bin/composer install --optimize-autoloader --no-dev
     # - /usr/local/bin/php artisan key:generate
