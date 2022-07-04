@@ -1,11 +1,11 @@
 deployment:
   tasks:
     - export DEPLOYPATH=/home/alofougedusd/test.alofoug.edu.sd/
-      - /bin/php artisan key:generate
-      - /bin/php artisan config:cache
-      - /bin/php artisan route:cache
-      - /bin/php artisan view:cache
-      - /bin/php artisan route:trans:cache
-      - /bin/php artisan storage:link
-      - /bin/php artisan migrate:fresh --seed
+    - /bin/php artisan key:generate
+    - /bin/php artisan config:cache
+    - /bin/php artisan route:cache
+    - /bin/php artisan view:cache
+    - /bin/php artisan route:trans:cache
+    - /bin/php artisan storage:link
+    - /bin/php artisan migrate:fresh --seed
 
