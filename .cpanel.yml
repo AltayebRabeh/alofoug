@@ -6,4 +6,5 @@ deployment:
     - /bin/php artisan route:cache
     - /bin/php artisan view:cache
     - /bin/php artisan route:trans:cache
+    - /bin/php artisan storage:link
 
