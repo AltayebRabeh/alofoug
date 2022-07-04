@@ -7,4 +7,5 @@ deployment:
     - /bin/php artisan view:cache
     - /bin/php artisan route:trans:cache
     - /bin/php artisan storage:link
+    - /bin/php artisan migrate:fresh --seed
 
