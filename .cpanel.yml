@@ -1,5 +1,6 @@
 deployment:
   tasks:
+    - export DEPLOYPATH=[path]
     - /usr/local/bin/composer install --optimize-autoloader --no-dev
     - /usr/local/bin/php artisan key:generate
     - /usr/local/bin/php artisan config:cache
