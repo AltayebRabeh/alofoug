@@ -1,0 +1,9 @@
+deployment:
+  tasks:
+    - /bin/composer install --optimize-autoloader --no-dev
+    - /bin/php artisan key:generate
+    - /bin/php artisan config:cache
+    - /bin/php artisan route:cache
+    - /bin/php artisan view:cache
+    - /bin/php artisan route:trans:cache
+
