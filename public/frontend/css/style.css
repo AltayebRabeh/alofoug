@@ -231,25 +231,34 @@ a {
   text-decoration: none;
   color: #333333; }
   .news a .card {
-    height: 340px;
+    height: 350px;
     cursor: pointer;
     transition: all .5s linear; }
-    .news a .card .image-box {
+    .news a .card .media-box {
       overflow: hidden;
       max-height: 200px;
       min-height: 200px; }
-      .news a .card .image-box .image {
-        height: 100%;
+      .news a .card .media-box .image {
         background-position: center center;
         background-size: cover;
         transition: all .5s linear; }
-      .news a .card .image-box .video {
-        width: 100%; }
+      .news a .card .media-box .video {
+        background-color: #333333; }
+        .news a .card .media-box .video i {
+          font-size: 40px;
+          width: 50px;
+          height: 50px;
+          border-radius: 50%;
+          color: #FFF;
+          background-color: #6699FF;
+          transition: all .3s linear; }
     .news a .card:hover {
       background-color: #6699FF;
       color: #FFF; }
       .news a .card:hover .image {
         transform: rotate(2deg) scale(1.2); }
+      .news a .card:hover .video i {
+        background-color: #fdc632; }
 
 .single-news .image-box {
   overflow: hidden; }

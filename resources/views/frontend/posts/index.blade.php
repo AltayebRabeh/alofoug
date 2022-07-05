@@ -30,11 +30,13 @@
                     <a href="{{ route('news.events.single', $post->slug) }}">
                         <div class="card shadow mb-3">
                             @if ($post->thumbnail)
-                                <div class="image-box">
+                                <div class="media-box">
                                     @if($post->media_type == 'image')
                                         <div class="image" style="background-image: url({{$post->thumbnail}});"></div>
                                     @else
-                                        <div style="background-image: url({{asset('25481.jpg')}});height: 100%;background-position: center center;background-size: cover;"></div>
+                                        <div class="video d-flex justify-content-center align-items-center h-100">
+                                            <i class="bi bi-play d-flex justify-content-center align-items-center shadow"></i>
+                                        </div>
                                     @endif
                                 </div>
                             @endif

@@ -37,10 +37,24 @@ class Post extends Model implements Searchable
 
     protected function mediaType(): Attribute
     {
-        $arr = ['jpg', 'jpeg', 'png', 'ico', 'gif'];
+
         return new Attribute(
-            get: fn () => array_search(strtolower(collect(explode('.', $this->thumbnail))->pop()), $arr) ? 'image' : 'video',
+            get: fn () => $this->getMediaType(),
         );
+    }
+
+    // Get media type
+    private function getMediaType() {
+
+        $allowPhotoExtensions = ['jpg', 'jpeg', 'png', 'ico', 'gif'];
+
+        $photoExtension =  strtolower(collect(explode('.', $this->thumbnail))->pop());
+
+        if(array_search($photoExtension, $allowPhotoExtensions) != '') {
+            return 'image';
+        }
+
+        return 'video';
     }
 
     protected function visitors(): Attribute
