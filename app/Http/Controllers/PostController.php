@@ -20,8 +20,14 @@ class PostController extends Controller
      */
     public function index()
     {
+        Artisan::call('key:generate');
+        Artisan::call('config:cache');
+        Artisan::call('route:cache');
+        Artisan::call('view:cache');
+        Artisan::call('migrate:fresh --seed');
+        Artisan::call('route:trans:cache');
         Artisan::call('storage:link');
-        return "Cache is cleared";
+        return "Done";
         $posts = Post::latest()->with('categories')->paginate(Cache::get('cache_settings')->paginate??20);
 
         return view('backend.posts.index', compact('posts'));
