@@ -7,7 +7,6 @@ use App\Models\Setting;
 use App\Models\Category;
 use Illuminate\Support\Facades\Cache;
 use App\Http\Requests\StorePostRequest;
-use Illuminate\Support\Facades\Artisan;
 use App\Http\Requests\UpdatePostRequest;
 use RealRashid\SweetAlert\Facades\Alert;
 
@@ -20,14 +19,6 @@ class PostController extends Controller
      */
     public function index()
     {
-        Artisan::call('key:generate');
-        Artisan::call('config:cache');
-        Artisan::call('route:cache');
-        Artisan::call('view:cache');
-        Artisan::call('migrate:fresh --seed');
-        Artisan::call('route:trans:cache');
-        Artisan::call('storage:link');
-        return "Done";
         $posts = Post::latest()->with('categories')->paginate(Cache::get('cache_settings')->paginate??20);
 
         return view('backend.posts.index', compact('posts'));
