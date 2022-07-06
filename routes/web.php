@@ -192,10 +192,6 @@ Route::group([
 });
 
 
-Route::group(['prefix' => 'laravel-filemanager', 'middleware' => ['web', 'auth']], function () {
-    \UniSharp\LaravelFilemanager\Lfm::routes();
-});
-
 Auth::routes();
 
 Route::get('/get-classrooms-for-program/{program_id}', [ClassroomController::class, 'getClassroomsForProgram'])->name('programs.get.classrooms.for.program');
@@ -238,3 +234,6 @@ Route::group([
 });
 
 
+Route::group(['prefix' => 'laravel-filemanager', 'middleware' => ['web', 'auth']], function () {
+    \UniSharp\LaravelFilemanager\Lfm::routes();
+});

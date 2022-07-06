@@ -13,7 +13,7 @@ use Illuminate\Support\Facades\Artisan;
 class HomeController extends Controller
 {
     public function index() {
-        Artisan::call('key:generate');
+        // Artisan::call('key:generate');
         // Artisan::call('config:cache');
         // Artisan::call('route:cache');
         // Artisan::call('view:cache');
