@@ -80,7 +80,7 @@
 
                                         <div class="form-group">
                                             <label for="permissions">الصلاحيات</label>
-                                            <select name="permissions[]" id="permissions" class="select2 form-control" multiple>
+                                            <select name="permissions[]" id="permissions" class="select2 form-control"  multiple="multiple">
                                                 @foreach ($permissions as $permision)
                                                     <option value="{{ $permision->id }}">{{ $permision->name }}</option>
                                                 @endforeach

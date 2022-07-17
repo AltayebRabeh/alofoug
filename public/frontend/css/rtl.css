@@ -1,17 +1,7 @@
 @media (max-width: 991px) {
   .top-bar marquee {
     border-left-width: 3px;
-    border-right-width: 0;
-    margin-left: 20px;
-    margin-right: 0; } }
-
-.top-bar .search {
-  margin-right: 0;
-  margin-left: 20px; }
-
-.top-bar .social-media a {
-  margin-left: 0;
-  margin-right: 5px; }
+    border-right-width: 0; } }
 
 .navbar .navbar-brand {
   margin-right: 0; }

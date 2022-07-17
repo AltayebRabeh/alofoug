@@ -27,6 +27,10 @@
         .brand-text {
             font-size: 14px;
         }
+
+        .select2-container {
+            width: 100% !important;
+        }
     </style>
 
 

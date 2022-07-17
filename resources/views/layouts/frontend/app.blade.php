@@ -69,7 +69,7 @@
             <!-- Start Topbar -->
     <div class="top-bar">
         <div class="container">
-            <div class="d-flex justify-content-between align-items-center">
+            <div class="d-grid align-items-center">
                 <a href="{{ route('index') }}" class="logo d-none d-md-block">
                     <img src="{{ $cache_settings ? $cache_settings->logo : config('app.name', 'alofoug') }}" alt="">
                 </a>
@@ -139,13 +139,13 @@
                     @if($cache_main_menu)
                         @foreach ($cache_main_menu as $link)
                         <li class="nav-item {{ $link->childrens->first() ? 'dropdown' : ''}}">
-                            <a class="nav-link {{ $link->childrens->first() ? 'dropdown-toggle' : '' }}" href="{{ $link->link->url }}" {{ $link->childrens->first() ? 'id="navbarDropdown" role="" data-bs-toggle="dropdown" aria-expanded="false"' : ''}}>
+                            <a class="nav-link {{ $link->childrens->first() ? 'dropdown-toggle' : '' }}" href="{{ $link->link->url ?? 'javascript:void()' }}" {{ $link->childrens->first() ? 'id="navbarDropdown" role="" data-bs-toggle="dropdown" aria-expanded="false"' : ''}}>
                                 {{ $link->link->name }}
                             </a>
                             @if($link->childrens->first())
                                 <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
                                     @foreach ($link->childrens as $child)
-                                        <li><a class="dropdown-item" href="{{ $child->link->url }}">{{ $child->link->name }}</a></li>
+                                        <li><a class="dropdown-item" href="{{ $child->link->url ?? 'javascript:void()' }}">{{ $child->link->name }}</a></li>
                                     @endforeach
                                 </ul>
                             @endif

@@ -26,7 +26,7 @@ class UpdateLinkRequest extends FormRequest
         return [
             'name' => 'required|max:255',
             'name_en' => 'required|max:255',
-            'url' => 'required|url'
+            'url' => 'nullable|url'
         ];
     }
 

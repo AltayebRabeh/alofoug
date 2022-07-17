@@ -82,49 +82,50 @@ a {
   background-color: #6699ff !important;
   border-color: #6699ff !important; }
 
-.top-bar .logo img {
-  max-width: 300px; }
-
-.top-bar marquee {
-  margin: 0 20px;
-  border-width: 0 3px;
-  border-style: solid;
-  border-color: #6699FF; }
-  @media (max-width: 991px) {
-    .top-bar marquee {
-      border-left-width: 0;
-      margin-left: 0; } }
-  .top-bar marquee a {
-    text-decoration: none;
-    color: #333333; }
-    .top-bar marquee a:hover {
-      color: #6699FF; }
-
-.top-bar .search {
-  margin-right: 20px; }
-  .top-bar .search a {
+.top-bar div.d-grid {
+  display: grid;
+  grid-template-columns: 1fr repeat(3, auto);
+  column-gap: 10px; }
+  @media (min-width: 767px) {
+    .top-bar div.d-grid {
+      grid-template-columns: auto 1fr repeat(3, auto); } }
+  .top-bar div.d-grid .logo img {
+    max-width: 300px; }
+  .top-bar div.d-grid marquee {
+    border-width: 0 3px;
+    border-style: solid;
+    border-color: #6699FF; }
+    @media (max-width: 991px) {
+      .top-bar div.d-grid marquee {
+        border-left-width: 0; } }
+    .top-bar div.d-grid marquee a {
+      text-decoration: none;
+      color: #333333; }
+      .top-bar div.d-grid marquee a:hover {
+        color: #6699FF; }
+  .top-bar div.d-grid .search a {
     background-color: transparent;
     border: none; }
-    .top-bar .search a:hover,
-    .top-bar .search a :active,
-    .top-bar .search a :focus {
+    .top-bar div.d-grid .search a:hover,
+    .top-bar div.d-grid .search a :active,
+    .top-bar div.d-grid .search a :focus {
       color: #fdc632;
       outline: none;
       box-shadow: none; }
-
-.top-bar .social-media a {
-  margin-left: 5px;
-  cursor: pointer;
-  text-decoration: none;
-  transition: all .15s linear; }
-  .top-bar .social-media a i {
-    color: #6699FF;
-    transition: all .15s linear;
-    font-size: 20px; }
-  .top-bar .social-media a:hover {
-    transform: scale(1.2); }
-    .top-bar .social-media a:hover i {
-      color: #fdc632; }
+  .top-bar div.d-grid .social-media a {
+    margin: auto 5px; }
+  .top-bar div.d-grid .social-media a {
+    cursor: pointer;
+    text-decoration: none;
+    transition: all .15s linear; }
+    .top-bar div.d-grid .social-media a i {
+      color: #6699FF;
+      transition: all .15s linear;
+      font-size: 20px; }
+    .top-bar div.d-grid .social-media a:hover {
+      transform: scale(1.2); }
+      .top-bar div.d-grid .social-media a:hover i {
+        color: #fdc632; }
 
 .navbar {
   background-color: #6699FF;
@@ -251,14 +252,14 @@ a {
           border-radius: 50%;
           color: #FFF;
           background-color: #6699FF;
-          transition: all .3s linear; }
+          transition: all .5s linear; }
     .news a .card:hover {
       background-color: #6699FF;
       color: #FFF; }
       .news a .card:hover .image {
         transform: rotate(2deg) scale(1.2); }
       .news a .card:hover .video i {
-        background-color: #fdc632; }
+        transform: scale(1.4); }
 
 .single-news .image-box {
   overflow: hidden; }
